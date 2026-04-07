@@ -48,12 +48,12 @@
   --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.10);
 
   --ifm-background-color: #0F172A;
-  --ifm-navbar-background-color: #0F1629;
-  --ifm-footer-background-color: #080E1A;
+  --ifm-navbar-background-color: #0F172A;
+  --ifm-footer-background-color: #0F172A;
   --ifm-background-surface-color: #0F172A;
 
   --vs-bg-doc: #0F172A;
-  --vs-surface: #1E2A3B;
+  --vs-surface: #0F172A;
   --vs-border: rgba(37, 99, 235, 0.14);
 }
 
@@ -194,7 +194,7 @@ body:has(.navbar-sidebar--show) { overflow: hidden !important; }
 }
 
 [data-theme='dark'] .theme-doc-sidebar-container {
-  background: linear-gradient(180deg, #0B1220 0%, #0D1526 60%, #0F172A 100%);
+  background: #0F172A;
   border-right: 1px solid rgba(37, 99, 235, 0.1) !important;
 }
 
@@ -592,10 +592,14 @@ tbody tr:last-child td { border-bottom: none; }
 }
 
 /* ── DOC PAGE — uniform background ── */
+[data-theme='dark'] html,
+[data-theme='dark'] body,
+[data-theme='dark'] .main-wrapper,
 [data-theme='dark'] .docPage,
 [data-theme='dark'] .docMainContainer,
 [data-theme='dark'] .docItemContainer,
 [data-theme='dark'] .col.docItemCol,
+[data-theme='dark'] .theme-doc-markdown,
 [data-theme='dark'] article {
   background-color: #0F172A !important;
 }
