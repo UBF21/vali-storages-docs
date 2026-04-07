@@ -12,6 +12,21 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — versioning 
 
 ---
 
+## [2.1.0] — 2026-04-07
+
+### Refactored
+
+- Extracted cross-tab synchronization into a dedicated `CrossTabSync` class (SRP).  
+  `ValiStorages` now delegates all `storage` event handling — registration, key unprefixing, plain/encrypted dispatch, and teardown — to this internal class. No public API changes.
+
+### Fixed
+
+- `updateExpiry` now routes through `safeStorageSet` (consistent quota-exceeded handling).
+- `cryptoInstance` field typed as `ICrypto | null`; access is guarded at every call site to eliminate the previous `null!` non-null assertion.
+- Cross-tab decrypt path safely handles an encrypted item arriving at a non-encrypted instance (returns `null` instead of throwing).
+
+---
+
 ## [2.0.0] — 2024-12-01
 
 ### Breaking Changes

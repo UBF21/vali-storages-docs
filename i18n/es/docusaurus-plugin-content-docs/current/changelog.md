@@ -12,6 +12,21 @@ Formato: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — versionado
 
 ---
 
+## [2.1.0] — 2026-04-07
+
+### Refactorización
+
+- La sincronización cross-tab fue extraída a una clase dedicada `CrossTabSync` (SRP).  
+  `ValiStorages` delega todo el manejo de eventos `storage` — registro, desprefijar claves, despacho plain/cifrado y destrucción — a esta clase interna. Sin cambios en la API pública.
+
+### Corregido
+
+- `updateExpiry` ahora usa `safeStorageSet` (manejo consistente de quota excedida).
+- El campo `cryptoInstance` es tipado como `ICrypto | null`; el acceso está protegido en cada punto de uso, eliminando la aserción `null!` anterior.
+- El path de descifrado cross-tab maneja correctamente un item cifrado que llega a una instancia no cifrada (retorna `null` en lugar de lanzar excepción).
+
+---
+
 ## [2.0.0] — 2024-12-01
 
 ### Cambios que rompen compatibilidad

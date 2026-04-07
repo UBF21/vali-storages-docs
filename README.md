@@ -226,6 +226,20 @@ useEffect(() => {
 
 ---
 
+## Changelog
+
+### v2.1.0
+- Internal: cross-tab sync extracted to `CrossTabSync` class — no public API changes
+- Fix: `cryptoInstance` properly typed as `ICrypto | null`
+- Fix: `updateExpiry` uses consistent error handling
+- Fix: cross-tab decrypt returns `null` safely when instance has no crypto
+
+### v2.0.0 (Breaking)
+- `setItem` / `getItem` are now async
+- `getItem` no longer uses a callback
+
+---
+
 ## Migration from v1.x
 
 **`setItem` is now async** — add `await` to all calls.
