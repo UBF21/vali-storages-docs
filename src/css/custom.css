@@ -591,11 +591,6 @@ tbody tr:last-child td { border-bottom: none; }
   .footer__copyright { font-size: 0.66rem; }
 }
 
-/* ── DOC PAGE LAYOUT ── */
-.docMainContainer {
-  background: linear-gradient(to bottom, rgba(37, 99, 235, 0.025), transparent 200px);
-}
-
 .hero--primary {
   background: linear-gradient(135deg, #0F172A 0%, #0B1535 60%, #080E1A 100%);
 }
