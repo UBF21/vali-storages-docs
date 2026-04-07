@@ -1,0 +1,29 @@
+# Claude Code
+.claude/
+.claudeignore
+CLAUDE.md
+
+# Dependencies
+node_modules/
+
+# Build output
+build/
+
+# Docusaurus generated files
+.docusaurus/
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Env
+.env
+.env.*
+
+# Lock (optional — remove if you want to commit it)
+# bun.lock
