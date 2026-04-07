@@ -591,6 +591,15 @@ tbody tr:last-child td { border-bottom: none; }
   .footer__copyright { font-size: 0.66rem; }
 }
 
+/* ── DOC PAGE — uniform background ── */
+[data-theme='dark'] .docPage,
+[data-theme='dark'] .docMainContainer,
+[data-theme='dark'] .docItemContainer,
+[data-theme='dark'] .col.docItemCol,
+[data-theme='dark'] article {
+  background-color: #0F172A !important;
+}
+
 .hero--primary {
   background: linear-gradient(135deg, #0F172A 0%, #0B1535 60%, #080E1A 100%);
 }
